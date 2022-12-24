@@ -1,0 +1,27 @@
+{
+  "name": "reactapplications",
+  "version": "1.0.0",
+  "description": "creating a react applicaton",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mHwak22/reactApplications.git"
+  },
+  "author": "mHwak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mHwak22/reactApplications/issues"
+  },
+  "homepage": "https://github.com/mHwak22/reactApplications#readme",
+  "dependencies": {
+    "bootstrap": "4.6",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0-beta.1",
+    "react-bootstrap-icons": "^1.10.2",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.1"
+  }
+}
