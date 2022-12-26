@@ -1,12 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from "./Components/Header"
-import HomePage from "./Components/HomePage"
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ProductAdd from "./Components/ProductAdd"
-import ProductEdit from "./Components/ProductEdit"
-import ProductList from "./Components/ProductList"
-import ProductDelete from "./Components/ProductDelete"
 import {useState} from "react"
 
 
@@ -47,20 +42,24 @@ function App() {
     }
   ])
 
+  const insertData=(ob)=>{
+    //add ob object in the array
+    setprodarr([...prodarr,{...ob}]);
+    //setting array or object in array..
+  }
 
 
   return (
     <div className="App">
       <Header></Header>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={HomePage}></Route>
-          <Route path="/addprod" exact component={ProductAdd}></Route>
-          <Route path="/editprod" exact component={ProductEdit}></Route>
-          <Route path="/deleteprod" exact component={ProductDelete}></Route>
-          <Route path="/product" exact component={ProductList}></Route>
-        </Switch>
-      </Router>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-sm-12 col-md-6'>
+            <ProductAdd addProduct={insertData}></ProductAdd>
+            {/* addProduct is the variable in which the value is coming from the child  */}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

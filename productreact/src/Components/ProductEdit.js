@@ -1,4 +1,6 @@
 const ProductEdit=()=>{
-    return
+    return(
+        <h1>In Product ProductEdit</h1>
+    )
 }
 export default ProductEdit;
