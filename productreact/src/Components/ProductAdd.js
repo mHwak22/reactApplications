@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const ProductAdd = (props) => {
 //declaring Object and  checking it's State..
-    let [prodOb,setProdOb]=useState({pid:"",pname:"",pprice:""});
+    let [prodOb,setProdOb]=useState({pid:"",pname:"",price:""});
     const handleChange=(event)=>{
         console.log("In Handle Change")
         let {name,value}=event.target;
@@ -11,7 +11,7 @@ const ProductAdd = (props) => {
     //o send data from FORM to app.js to add in array
     const addData=(event)=>{
         event.preventDefault();//to stop the page refresh action of the submit button
-        if(prodOb.pid==="" || prodOb.pname==="" || prodOb.pprice===""){
+        if(prodOb.pid==="" || prodOb.pname==="" || prodOb.price===""){
             alert("Please fill all values ")
             return;
         }
@@ -38,8 +38,8 @@ const ProductAdd = (props) => {
                        
                 </div>
                 <div class="col-md-6 mb-3">
-                    Product Price: <input type="text" className="form-control"  placeholder="Enter prod Price" id="pprice" name="pprice"
-                    value={prodOb.pprice}
+                    Product Price: <input type="text" className="form-control"  placeholder="Enter prod Price" id="price" name="price"
+                    value={prodOb.price}
                     onChange={handleChange} />
                      
                 </div>
